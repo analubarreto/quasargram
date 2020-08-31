@@ -6,7 +6,7 @@
           flat
           dense
           round
-          icon="menu"
+          icon="eva-menu-2-outline"
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
@@ -18,10 +18,26 @@
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
-    <q-footer elevated>
-      <q-toolbar>
-        <q-toolbar-title>Footer</q-toolbar-title>
-      </q-toolbar>
+    <q-footer
+      class="bg-white"
+      bordered
+    >
+      <q-toolbar-title>
+        <q-tabs
+          class="text-grey-10"
+          active-color="primary"
+          indicator-color="transparent"
+        >
+          <q-route-tab
+            to="/"
+            icon="eva-home-outline"
+          />
+          <q-route-tab
+            to="/camera"
+            icon="eva-camera-outline"
+          />
+        </q-tabs>
+      </q-toolbar-title>
     </q-footer>
     <q-page-container>
       <router-view />
@@ -39,3 +55,9 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+.q-footer
+  .q-tab__icon
+    font-size: 30px
+</style>
