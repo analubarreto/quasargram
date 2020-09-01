@@ -32,10 +32,13 @@
           </q-card-section>
         </q-card>
       </div>
-      <div class="col-4">
-        <q-item class="fixed larger-screen-only">
+      <div class="col-4 larger-screens-only">
+        <q-item>
           <q-item-section avatar>
-            <q-avatar size="48px">
+            <q-avatar
+              size="48px"
+              class="fixed"
+            >
               <img src="https://cdn.quasar.dev/img/boy-avatar.png">
             </q-avatar>
           </q-item-section>
@@ -53,7 +56,7 @@
 </template>
 
 <script>
-import { date } from 'quasar'
+import { date, uid } from 'quasar'
 
 export default {
   name: 'PageHome',
@@ -61,28 +64,28 @@ export default {
     return {
       posts: [
         {
-          id: "84d1efbae13044bb99dbc77bb193f3b3",
+          id: uid(),
           caption: "Golden Gate Bridge",
           date: 1598986127164,
           location: "Brasília, DF, Brazil",
           imgUrl: "https://cdn.quasar.dev/img/parallax2.jpg"
         },
         {
-          id: "d2ac75eb510745d2b47c1a188569c81c",
+          id: uid(),
           caption: "Golden Gate Bridge",
           date: 1598986127164,
           location: "Brasília, DF, Brazil",
           imgUrl: "https://cdn.quasar.dev/img/parallax2.jpg"
         },
         {
-          id: "a2475e7661714e01bdcc39e5431c3f69",
+          id: uid(),
           caption: "Golden Gate Bridge",
           date: 1598986127164,
           location: "Brasília, DF, Brazil",
           imgUrl: "https://cdn.quasar.dev/img/parallax2.jpg"
         },
         {
-          id: "8383be4d7ea34ea2b0ad2a9947eef4d0",
+          id: uid(),
           caption: "Golden Gate Bridge",
           date: 1598986127164,
           location: "Brasília, DF, Brazil",
