@@ -56,7 +56,7 @@
         </q-tabs>
       </q-toolbar-title>
     </q-footer>
-    <q-page-container>
+    <q-page-container class="bg-grey-1">
       <router-view />
     </q-page-container>
   </q-layout>
