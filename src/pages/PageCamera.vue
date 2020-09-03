@@ -54,6 +54,7 @@
         >
           <template v-slot:append>
             <q-btn
+              @click="getLocation"
               round
               dense
               flat
@@ -170,6 +171,13 @@ export default {
       // write the ArrayBuffer to a blob, and you're done
       const blob = new Blob([ab], { type: mimeString });
       return blob;
+    },
+    getLocation () {
+      navigator.geolocation.getCurrentPosition(position => {
+        console.log("position", position)
+      }, err => {
+        console.log("variable", err)
+      }, { timeout: 7000 })
     }
   },
   mounted () {
