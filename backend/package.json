@@ -1,0 +1,17 @@
+{
+  "name": "quasargram-backend",
+  "version": "1.0.0",
+  "description": "quasargram backend",
+  "main": "index.js",
+  "author": "Ana Luiza",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js",
+    "deploy": "heroku builds:create -a quasargram-busyb"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase-admin": "^9.1.1",
+    "nodemon": "^2.0.4"
+  }
+}
